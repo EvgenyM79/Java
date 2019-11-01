@@ -1,36 +1,26 @@
 public class Task3 {
 
-
-    static public void main(String[] args){
-        //Калькулятор для двух чисел
-        String res = "25 + 7";
-        int Result = 0;
-        System.out.println("Выражение = " + res);
-        String[] exp = res.split(" ");
-        for (int i = 0; i < exp.length; i++ ){
-            switch (exp[i]) {
-                case "+": {
-                    Result = Integer.valueOf(exp[i - 1]) + Integer.valueOf(exp[i + 1]);
-                    break;
-                }
-                case "-": {
-                    Result = Integer.valueOf(exp[i - 1]) - Integer.valueOf(exp[i + 1]);
-                    break;
-                }
-                case "*": {
-                    Result = Integer.valueOf(exp[i - 1]) * Integer.valueOf(exp[i + 1]);
-                    break;
-                }
-                case "/": {
-                    Result = Integer.valueOf(exp[i - 1]) / Integer.valueOf(exp[i + 1]);
-                    break;
-                }
-
+    public static void searchCh  (String stroka, char findCh) {
+        System.out.println(stroka);
+        int numCh = stroka.length()-1;
+        System.out.println("Всего символов в строке " + numCh);
+        char[] allCh = new char[numCh];
+        allCh = stroka.toCharArray();
+        int index = 0; numCh = 0;
+        for (char masCh: allCh){
+            if (masCh == findCh ) {
+                System.out.println("Найден символ " + masCh + " - позиция " + index);
+                numCh ++;
             }
-
+            index ++;
         }
-        System.out.println(Result);
-
-
+        System.out.println("Символ \"" + findCh + "\" встретился " + numCh + " раз(а)." );
     }
+
+    public static void main(String[] args) {
+        String newStroka = "sdfdsf,srwe14,7854,,dgd,afrfg6789421,afasd234,1235zcpoyudnvode..,10";
+        char newfindCh = ',';
+        searchCh(newStroka,newfindCh);
+    }
+
 }
