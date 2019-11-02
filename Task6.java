@@ -4,24 +4,24 @@ public class Task6 {
             String result = "";
             System.out.println(stroka1);
             System.out.println(stroka2);
-            int num1 = stroka1.length() - 1;
-            boolean[] trueChForStroka1 = new boolean[num1 + 1];
-            int num2 = stroka2.length() - 1;
-            boolean[] trueChForStroka2 = new boolean[num2 + 1];
+            int num1 = stroka1.length();
+            boolean[] trueChForStroka1 = new boolean[num1];
+            int num2 = stroka2.length();
+            boolean[] trueChForStroka2 = new boolean[num2];
             // System.out.println("Всего символов в строке " + (num1));
             // System.out.println("Всего символов в строке " + (num2));
-            char[] chFromStroka1 = new char[num1 - 1];
-            char[] chFromStroka2 = new char[num2 - 1];
-            for (int i = 0; i <= num1; i++) {
+            char[] chFromStroka1 = new char[num1];
+            char[] chFromStroka2 = new char[num2];
+            for (int i = 0; i < num1; i++) {
                 trueChForStroka1[i] = true;
             }
-            for (int i = 0; i <= num2; i++) {
+            for (int i = 0; i < num2; i++) {
                 trueChForStroka2[i] = true;
             }
             chFromStroka1 = stroka1.toCharArray();
             chFromStroka2 = stroka2.toCharArray();
-            for (int i = 0; i <= num1; i++) {
-                for (int j = i + 1; j <= num1; j++) {
+            for (int i = 0; i < num1; i++) {
+                for (int j = i + 1; j < num1; j++) {
                     // System.out.print(num1 + " " + i + " " + j + " " + chFromStroka1[i] + " " + chFromStroka1[j] + " " + trueChForStroka1[j]);
                     // System.out.println("");
                     if (chFromStroka1[i] == chFromStroka1[j] && trueChForStroka1[j]) {
@@ -29,7 +29,7 @@ public class Task6 {
                         // System.out.println("Строка 1 символа \"" + chFromStroka1[i] + "\"" + " позиция " + i + " совпал с индксом строки 1 позиция " + j);
                     }
                 }
-                for (int j = 0; j <= num2; j++) {
+                for (int j = 0; j < num2; j++) {
                     // System.out.print(num2 + " " + i + " " + j + " " + chFromStroka1[i] + " " + chFromStroka2[j] + " " + trueChForStroka2[j]);
                     // System.out.println("");
                     if (chFromStroka1[i] == chFromStroka2[j] && trueChForStroka2[j]) {
@@ -47,12 +47,12 @@ public class Task6 {
             }
             return stroka1 + stroka2;
         */
-            for (int i = 0; i <= num1; i++) {
+            for (int i = 0; i < num1; i++) {
                 if (trueChForStroka1[i]) {
                     result += chFromStroka1[i];
                 }
             }
-            for (int i = 0; i <= num2; i++) {
+            for (int i = 0; i < num2; i++) {
                 if (trueChForStroka2[i]) {
                     result += chFromStroka2[i];
 
