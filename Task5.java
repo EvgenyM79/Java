@@ -9,7 +9,13 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        String newColumn = "AA";
+        String newCell = "BB123";
+        System.out.println(newCell);
+        String newColumn = newCell.replaceAll("[0-9]+","");
+        //System.out.println(newColumn);
+        int nline = Integer.parseInt(newCell.replaceAll("[a-zA-Z]+",""));
+        //System.out.println(nline);
         System.out.println("Столбец " + toNumber(newColumn));
+        System.out.println("Строка " + nline);
     }
 }
