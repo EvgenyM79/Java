@@ -9,7 +9,7 @@ public class Task3 {
         int index = 0; numCh = 0;
         for (char masCh: allCh){
             if (masCh == findCh ) {
-                System.out.println("Найден символ " + masCh + " - позиция " + index);
+                System.out.println("Найден символ \"" + masCh + "\" - позиция " + index);
                 numCh ++;
             }
             index ++;
